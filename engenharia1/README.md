@@ -8,3 +8,79 @@ b)desempenho e escalabilidade, o desempenho focando no tempo de resposta e na ef
 c)A velocidade custuma ser crucial para cumprir os prazos dos projetos e grandes demandas,porém, manter a qualidade do código tambem é sim importante para garantir um software mais sustentavel.
 
 4.
+
+5.
+```
+public class Livro {
+    private String titulo;
+    private String autor;
+
+    public Livro(String titulo, String autor) {
+        this.titulo = titulo;
+        this.autor = autor;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public String toString() {
+        return "Livro: " + titulo + " | Autor: " + autor;
+    }
+}
+
+import java.util.ArrayList;
+
+public class Biblioteca {
+    private ArrayList<Livro> livrosDisponiveis;
+
+    public Biblioteca() {
+        livrosDisponiveis = new ArrayList<>();
+    }
+
+    public void adicionarLivro(Livro livro) {
+        livrosDisponiveis.add(livro);
+        System.out.println("Livro adicionado: " + livro);
+    }
+    public void removerLivro(String titulo) {
+        for (Livro livro : livrosDisponiveis) {
+            if (livro.getTitulo().equalsIgnoreCase(titulo)) {
+                livrosDisponiveis.remove(livro);
+                System.out.println("Livro removido: " + livro);
+                return;
+            }
+        }
+        System.out.println("Livro não encontrado: " + titulo);
+    }
+
+    public void listarLivros() {
+        System.out.println("Livros na biblioteca:");
+        for (Livro livro : livrosDisponiveis) {
+            System.out.println(livro);
+        }
+    }
+}
+public class TesteBiblioteca {
+    public static void main(String[] args) {
+        Biblioteca biblioteca = new Biblioteca();
+
+        Livro livro1 = new Livro("Dom Casmurro", "Machado de Assis");
+        Livro livro2 = new Livro("A Revolução dos Bichos", "George Orwell");
+        Livro livro3 = new Livro("1984", "George Orwell");
+
+        biblioteca.adicionarLivro(livro1);
+        biblioteca.adicionarLivro(livro2);
+        biblioteca.adicionarLivro(livro3);
+
+        biblioteca.listarLivros();
+
+        biblioteca.removerLivro("1984");
+
+        biblioteca.listarLivros();
+    }
+}
+```
