@@ -7,7 +7,7 @@
 b)desempenho e escalabilidade, o desempenho focando no tempo de resposta e na eficiencia do sistema, pórem, a escabilidade envolve em produzir sistemas que aguentem grandes cargas de trabalho, de usuários e volume de dados maiores.
 c)A velocidade custuma ser crucial para cumprir os prazos dos projetos e grandes demandas,porém, manter a qualidade do código tambem é sim importante para garantir um software mais sustentavel.
 
-4.A mensagem principal da imagem é sempre começe por uma versão simples porém funcional, ao invés de construir partes que só irão funcionar ao final. Isso permite aprender desde o início do projeto.
+4.A mensagem principal da imagem é sempre começe por uma versão simples porém funcional, ao invés de construir partes que só irão funcionar ao final. Isso permite aprender desde o início do projeto.//
 
 5.
 ```
